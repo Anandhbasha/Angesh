@@ -1,0 +1,79 @@
+/* grid */
+.boxes{
+    display: grid;
+    
+    gap: 10px;
+    /* grid-template-columns: 400px 600px 200px; */
+    /* grid-template-columns: repeat(3,300px); */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* grid-template-columns: repeat(3,minmax(350px,1fr)); */
+    /* grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); */
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-template-rows: repeat(6,minmax(300px,1fr));
+}
+.box{
+    background-color: purple;
+    color: white;
+}
+.box1{
+    /* grid-column: 1/3; */
+    grid-column: span 3;
+}
+.grid{    
+    height: 100vh;
+    /* display: grid; */
+    gap: 10px;
+    grid-template-areas: 
+    "x x x"
+    "s c1 c1"
+    "s c2 c3"
+    "f f f";
+}
+.header{
+    grid-area: x;
+    background-color: blueviolet;
+    animation: bgchange 4s infinite;
+}
+.sidebar{
+    grid-area: s;
+    background-color: red;
+}
+.content1{
+    grid-area: c1;
+    background-color: green;
+}
+.content2{
+    grid-area: c2;
+    background-color: yellow;
+}
+.content3{
+    grid-area: c3;
+    background-color: pink;
+}
+.footer{
+    grid-area: f;
+    background-color: black;
+}
+
+/* @media (max-width:700px){
+    .header{
+        display: none;
+        background-color: aqua;
+    }
+} */
+
+@keyframes bgchange {
+    0%{
+        background-color: brown;
+    }
+    25%{
+        background-color: rebeccapurple;
+    }
+    60%{
+        background-color: goldenrod;
+    }
+    100%{
+        background-color: rgb(255, 0, 123);
+    }
+}
+
