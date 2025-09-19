@@ -229,12 +229,82 @@
         //     console.log(arr[x]);            
         // }
         // foreach
-        arr.forEach((item)=>console.log(item))
+        // arr.forEach((item)=>console.log(item))
 
 
-        let names = "anandh"
-        temp =""
-        for(let x of names){
-            temp = temp+x
-            console.log(temp);            
-        }
+        // let names = "anandh"
+        // temp =""
+        // for(let x of names){
+        //     temp = temp+x
+        //     console.log(temp);            
+        // }
+
+
+// array methods
+// map
+arr.map((item)=>console.log(item))
+// filter
+let arr1 = [55,13,8,17,16,20]
+console.log(arr1.filter((x)=>x%2!=0));
+
+let total = 0
+for (let x of arr1){
+    total+=x
+}
+console.log(total);
+
+// reduce
+let sum = arr1.reduce((x,y)=>x+y)
+console.log(sum);
+
+
+// push
+arr1.push(101)
+console.log(arr1);
+// pop
+arr1.pop()
+console.log(arr1);
+// shift
+arr1.shift()
+console.log(arr1);
+// unshift
+arr1.unshift(66)
+console.log(arr1);
+
+// indexOf
+console.log(arr1.indexOf(8));
+// includes
+console.log(arr1.includes(18));
+// sort
+let fruits = ["Banana","Apple","orange","Kiwi","Avacado"]
+console.log(fruits.sort());
+console.log(arr1.sort());
+
+
+let upper = fruits.map((x)=>x.toLowerCase())
+console.log(upper);
+
+// splice
+// fruits[2]="Watermelon"
+// console.log(fruits);
+fruits.splice(2,0,"Watermelon")
+console.log(fruits);
+// slice
+console.log(fruits.slice(0,4));
+
+//split
+let userName = "Angesh/A"
+
+console.log(userName.split("/"));
+
+// settimeout
+    // setTimeout(()=>{
+    //     console.log("Hello");
+        
+    // },5000)
+// setInterval
+    setInterval(()=>{
+        console.log("Hello");        
+    },5000)
+
+
