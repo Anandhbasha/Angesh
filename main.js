@@ -242,60 +242,60 @@
 
 // array methods
 // map
-arr.map((item)=>console.log(item))
+// arr.map((item)=>console.log(item))
 // filter
-let arr1 = [55,13,8,17,16,20]
-console.log(arr1.filter((x)=>x%2!=0));
+// let arr1 = [55,13,8,17,16,20]
+// console.log(arr1.filter((x)=>x%2!=0));
 
-let total = 0
-for (let x of arr1){
-    total+=x
-}
-console.log(total);
+// let total = 0
+// for (let x of arr1){
+//     total+=x
+// }
+// console.log(total);
 
 // reduce
-let sum = arr1.reduce((x,y)=>x+y)
-console.log(sum);
+// let sum = arr1.reduce((x,y)=>x+y)
+// console.log(sum);
 
 
 // push
-arr1.push(101)
-console.log(arr1);
+// arr1.push(101)
+// console.log(arr1);
 // pop
-arr1.pop()
-console.log(arr1);
+// arr1.pop()
+// console.log(arr1);
 // shift
-arr1.shift()
-console.log(arr1);
+// arr1.shift()
+// console.log(arr1);
 // unshift
-arr1.unshift(66)
-console.log(arr1);
+// arr1.unshift(66)
+// console.log(arr1);
 
 // indexOf
-console.log(arr1.indexOf(8));
+// console.log(arr1.indexOf(8));
 // includes
-console.log(arr1.includes(18));
+// console.log(arr1.includes(18));
 // sort
-let fruits = ["Banana","Apple","orange","Kiwi","Avacado"]
-console.log(fruits.sort());
-console.log(arr1.sort());
+// let fruits = ["Banana","Apple","orange","Kiwi","Avacado"]
+// console.log(fruits.sort());
+// console.log(arr1.sort());
 
 
-let upper = fruits.map((x)=>x.toLowerCase())
-console.log(upper);
+// let upper = fruits.map((x)=>x.toLowerCase())
+// console.log(upper);
 
 // splice
 // fruits[2]="Watermelon"
 // console.log(fruits);
-fruits.splice(2,0,"Watermelon")
-console.log(fruits);
+// fruits.splice(2,0,"Watermelon")
+// console.log(fruits);
 // slice
-console.log(fruits.slice(0,4));
+// console.log(fruits.slice(0,4));
 
 //split
-let userName = "Angesh/A"
+// let userName = "Angesh/A"
 
-console.log(userName.split("/"));
+// console.log(userName.split("/"));
 
 // settimeout
     // setTimeout(()=>{
@@ -303,8 +303,122 @@ console.log(userName.split("/"));
         
     // },5000)
 // setInterval
-    setInterval(()=>{
-        console.log("Hello");        
-    },5000)
+    // setInterval(()=>{
+    //     console.log("Hello");        
+    // },5000)
 
 
+// Async
+    // promise
+        // const newPromise = new Promise((resolved,reject)=>{
+        //     let coming = true
+        //     if(!coming){
+        //         reject("Still he is not came")
+        //     }
+        //     else{
+        //         resolved("He is Arrived")
+        //     }
+        // })
+
+        // newPromise.then((res)=>console.log(res)).catch((e)=>console.log(e))
+
+        // let friend1 = new Promise((resolved,reject)=>{
+        //     let reached = false
+        //     if(reached){
+        //         resolved("Friend1 Reached")
+        //     }
+        //     else{
+        //         reject("Not yet reached friend1")
+        //     }
+        // })
+        // let friend2 = new Promise((resolved,reject)=>{
+        //     let reached = true
+        //     if(reached){
+        //         resolved("Friend2 Reached")
+        //     }
+        //     else{
+        //         reject("Not yet reached friend2")
+        //     }
+        // })
+        // let friend3 = new Promise((resolved,reject)=>{
+        //     setTimeout(()=>{
+        //         let reached = true
+        //         if(reached){
+        //             resolved("Friend3 Reached")
+        //         }
+        //         else{
+        //             reject("Not yet reached friend3")
+        //         }
+        //     },5000)
+        // })
+        // let friend4 = new Promise((resolved,reject)=>{
+        //     let reached = false
+        //     if(reached){
+        //         resolved("Friend4 Reached")
+        //     }
+        //     else{
+        //         reject("Not yet reached friend4")
+        //     }
+        // })
+
+        // Promise.race([friend1,friend2,friend3,friend4]).then((res)=>{console.log(res)}).catch((error)=>{console.log(error)})
+        // Promise.any([friend1,friend2,friend3,friend4]).then((res)=>{console.log(res)}).catch((error)=>{console.log(error)})
+        // Promise.all([friend1,friend2,friend3,friend4]).then((res)=>{console.log(res)}).catch((error)=>{console.log(error)})
+        // Promise.allSettled([friend1,friend2,friend3,friend4]).then((res)=>{console.log(res)}).catch((error)=>{console.log(error)})
+
+
+// const fetchData = new Promise((resolved,reject)=>{
+//     fetch(`https://fakestoreapi.com/products`).then((response)=>{
+//         if(!response.ok){
+//             reject("Unable to connect")
+//         }else{
+//             resolved(response.json())
+//         }
+//     })
+// })
+// fetchData.then((result)=>{
+//     console.log(result)    
+// }).catch((err)=>{
+//     console.log(err)    
+// })
+
+// async
+// const fetchData = async()=>{
+//     try {
+//         const response = await fetch('https://fakestoreapi.com/products')
+//         if(!response.ok){
+//             throw Error("Unable to connect")
+//         }else{
+//             const data = await response.json()
+//             console.log(data);            
+//         }
+//     } catch (error) {
+//         console.log(error)   
+//     }
+// }
+
+// fetchData()
+
+// DOM
+    // Document Object Module
+
+    let btn = document.createElement("button")
+    // innerHTML
+    // innerText
+    // textContent
+    btn.innerText="click"
+    btn.style.padding="5px 40px"
+    btn.style.backgroundColor="purple"
+    btn.style.color="white"
+    btn.style.borderRadius="15px"
+    btn.style.border="none"
+    document.body.append(btn)
+
+
+    let button = document.getElementById('btn')
+
+    button.addEventListener('click',()=>{
+        setTimeout(()=>{
+            button.innerText="Edited"
+        },5000)
+    })
